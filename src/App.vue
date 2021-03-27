@@ -7,11 +7,24 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+// eslint-disable-next-line no-unused-vars
+import SelectUsername from './components/SelectUsername.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+  },
+  data() {
+    return {
+      usernameAlreadySelected: false,
+    };
+  },
+  methods: {
+    // eslint-disable-next-line no-unused-vars
+    onUsernameSelection(username) {
+      this.usernameAlreadySelected = true;
+    },
   },
 };
 </script>
